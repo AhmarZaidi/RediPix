@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/darkgray">
 
     <ToggleButton
         android:id="@+id/aboutToggle"
-        android:layout_width="35sp"
-        android:layout_height="35sp"
+        android:layout_width="38sp"
+        android:layout_height="38sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/guidelineH2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -37,12 +38,14 @@
 
     <EditText
         android:id="@+id/search"
-        android:layout_width="wrap_content"
+        android:layout_width="220sp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
         app:layout_constraintLeft_toLeftOf="@id/guidelineV5"
         app:layout_constraintRight_toLeftOf="@id/guidelineV3"
+        app:layout_constraintStart_toStartOf="@+id/guidelineV5"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV3"
         android:visibility="gone"
         android:hint="@string/enter_subreddit"
         android:text=""
@@ -53,22 +56,25 @@
 
     <Spinner
         android:id="@+id/spinnerSelect"
-        android:layout_width="wrap_content"
+        android:layout_width="270sp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
-        app:layout_constraintLeft_toLeftOf="@id/guidelineV5"
-        app:layout_constraintRight_toLeftOf="@id/guidelineV3"
-        android:textAlignment="center"
         android:background="@color/gray"
-        android:padding="20dp"
+        android:dropDownWidth="270sp"
         android:gravity="center"
-        />
+        android:padding="20dp"
+        android:popupBackground="@color/lightgray"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV4"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineV5"
+        app:layout_constraintRight_toLeftOf="@id/guidelineV4"
+        app:layout_constraintStart_toStartOf="@+id/guidelineV5"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
         android:id="@+id/addToggleButton"
-        android:layout_width="35sp"
-        android:layout_height="35sp"
+        android:layout_width="38sp"
+        android:layout_height="38sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
         app:layout_constraintRight_toRightOf="parent"
@@ -81,8 +87,8 @@
 
     <ImageButton
         android:id="@+id/searchButton"
-        android:layout_width="35sp"
-        android:layout_height="35sp"
+        android:layout_width="38sp"
+        android:layout_height="38sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
         app:layout_constraintRight_toRightOf="@id/guidelineV4"
@@ -92,7 +98,7 @@
         android:onClick="searchedButtonClicked"
         android:contentDescription="@string/search" />
 
-    <ImageView
+    <com.app.redditimagescrappersearch.ZoomClass
         android:id="@+id/memeImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -104,7 +110,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guidelineH2"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:backgroundTint="@color/darkgray"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -117,9 +125,9 @@
 
     <ImageButton
         android:id="@+id/shareButton"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="20sp"
+        android:layout_width="80sp"
+        android:layout_height="63sp"
+        android:layout_marginTop="10sp"
         android:background="@drawable/share"
         android:contentDescription="@string/share"
         android:hapticFeedbackEnabled="true"
@@ -128,7 +136,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineV1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV2"
         app:layout_constraintLeft_toRightOf="@id/guidelineV1"
         app:layout_constraintRight_toLeftOf="@+id/guidelineV2"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,9 +144,9 @@
 
     <ImageButton
         android:id="@+id/nextButton"
-        android:layout_width="45sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="23sp"
+        android:layout_width="80sp"
+        android:layout_height="63sp"
+        android:layout_marginTop="10sp"
         android:background="@drawable/next"
         android:hapticFeedbackEnabled="true"
         android:onClick="nextButtonClicked"
@@ -156,18 +164,16 @@
 
     <ImageButton
         android:id="@+id/downloadButton"
-        android:layout_width="42sp"
-        android:layout_height="42sp"
-        android:layout_marginTop="24sp"
-        android:background="@drawable/download"
-        android:contentDescription="@string/download"
-        android:onClick="downloadButtonClicked"
+        android:layout_width="80sp"
+        android:layout_height="63sp"
+        android:layout_marginTop="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineV3"
         app:layout_constraintLeft_toRightOf="@+id/guidelineV2"
         app:layout_constraintRight_toRightOf="@id/guidelineV3"
-        app:layout_constraintStart_toStartOf="@+id/guidelineV1"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineH1" />
+        app:layout_constraintTop_toBottomOf="@+id/guidelineH1"
+        android:background="@drawable/download"
+        android:onClick="downloadButtonClicked"
+        android:contentDescription="@string/download" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -182,14 +188,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.33" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineV3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.66" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineV4"
@@ -210,7 +216,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.91" />
+        app:layout_constraintGuide_percent="0.90" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineH2"
