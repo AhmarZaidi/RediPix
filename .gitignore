@@ -1,5 +1,6 @@
 *.iml
 .gradle
+.idea/
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -59,5 +60,6 @@ obj/
 /*/*/production
 *.iws
 *.ipr
+*.iws
 *~
 *.swp
