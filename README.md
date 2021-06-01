@@ -18,11 +18,11 @@ It's for testing and experimentation only and heavily depends on https://github.
 Note - Storage Permission needs to be given by going to App info>Permissions>Storage>Allow for the download feature to work.
 
 
-**How to Use:**
-Download apk from tags>Assets>Reddit.Image.Scrapper.1.0.apk(7.26 MB)
-Install:
-Blocked By Play Protect > Install Anyway
-Send app for scanning > Don't Send
+**How to Use:**  
+Download apk from tags>Assets>Reddit.Image.Scrapper.1.0.apk(7.26 MB)  
+Install:  
+Blocked By Play Protect > Install Anyway  
+Send app for scanning > Don't Send  
 Use.
 
 **Screenshots:**
