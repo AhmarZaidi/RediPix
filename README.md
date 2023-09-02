@@ -1,4 +1,4 @@
-# Reddit-Image-Scrapper-Search-
+# RediPix
 
 **Description:**   
   
